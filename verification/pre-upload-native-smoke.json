@@ -1,0 +1,100 @@
+{
+  "checkpoint_downloaded": false,
+  "cuda_exercised": false,
+  "earlier_correction_preserves_past": true,
+  "internal_image_size": 1024,
+  "modules_imported": [
+    "__init__",
+    "benchmark",
+    "checkpoints",
+    "config",
+    "data",
+    "demo",
+    "environment",
+    "evaluate",
+    "inference",
+    "io",
+    "metrics",
+    "pilot",
+    "reporting",
+    "runs",
+    "sam2_adapter",
+    "submissions",
+    "train",
+    "video"
+  ],
+  "native_shape": [
+    64,
+    80
+  ],
+  "parameters": 38962498,
+  "passed": true,
+  "point_and_box": true,
+  "repeat_and_reset": true,
+  "scope": "clean copied source tree with existing Mac environment; actual random-weight SAM2.1 Tiny CPU FP32 functional smoke",
+  "seconds": 38.07409741599986,
+  "session_isolation": {
+    "after": {
+      "0": "a11937f356a9b0ba592c82f5290bac8016cb33a3f9bc68d3490147c158ebb10d",
+      "1": "a11937f356a9b0ba592c82f5290bac8016cb33a3f9bc68d3490147c158ebb10d",
+      "2": "a11937f356a9b0ba592c82f5290bac8016cb33a3f9bc68d3490147c158ebb10d"
+    },
+    "before": {
+      "0": "a11937f356a9b0ba592c82f5290bac8016cb33a3f9bc68d3490147c158ebb10d",
+      "1": "a11937f356a9b0ba592c82f5290bac8016cb33a3f9bc68d3490147c158ebb10d",
+      "2": "a11937f356a9b0ba592c82f5290bac8016cb33a3f9bc68d3490147c158ebb10d"
+    },
+    "first_ids": [
+      7
+    ],
+    "independent_state_containers": true,
+    "passed": true,
+    "probe_frames": 3,
+    "scope": "one object per independent state; A-B-A interleaving without resetting A",
+    "second_ids": [
+      1
+    ],
+    "unchanged_ids": true,
+    "unchanged_predictions": true
+  },
+  "synthetic_native_frames": 4,
+  "training_exercised": {
+    "annotated_absence": true,
+    "finite_loss": 776.0504150390625,
+    "frames_per_clip": 4,
+    "frozen_weights_unchanged": true,
+    "gradient_details": {
+      "memory_attention.": {
+        "finite": true,
+        "nonzero": true,
+        "parameters_with_gradient": 106
+      },
+      "memory_encoder.": {
+        "finite": true,
+        "nonzero": true,
+        "parameters_with_gradient": 40
+      },
+      "obj_ptr_proj.": {
+        "finite": true,
+        "nonzero": false,
+        "parameters_with_gradient": 6
+      },
+      "obj_ptr_tpos_proj.": {
+        "finite": true,
+        "nonzero": true,
+        "parameters_with_gradient": 2
+      },
+      "sam_mask_decoder.": {
+        "finite": true,
+        "nonzero": true,
+        "parameters_with_gradient": 131
+      }
+    },
+    "microbatches": 1,
+    "optimizer_updates": 1,
+    "scope": "random-weight CPU FP32 functional smoke; one microbatch only, not the CUDA BF16/accumulation4 experiment",
+    "seconds": 17.356630207999842,
+    "trainable_weights_changed": true
+  },
+  "two_objects": true
+}

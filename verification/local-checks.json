@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-15",
+  "environment": {
+    "dependencies": "177 distributions; uv pip sync from requirements.txt with --require-hashes and uv pip check succeeded",
+    "python": "3.13.11"
+  },
+  "fresh_source_restore": {
+    "files_matched_manifest": 68,
+    "project_setup_and_notebook_imports": "macOS only",
+    "retrieval": "real pinned upstream sources",
+    "upstream_manifest": "artifacts/upstream.json"
+  },
+  "native_smoke": "pre-upload-native-smoke.json",
+  "native_smoke_limits": [
+    "Actual SAM2.1 Tiny uses random weights and native1024 preprocessing on CPU FP32; no official checkpoint or real dataset",
+    "One four-frame microbatch/one AdamW update only; not accumulation4, BF16, convergence or a completed pilot",
+    "The random fixture has finite but zero object-pointer-projection gradients; nonzero gradients across all declared modules remain a pretrained CUDA pilot gate",
+    "CPU timings are diagnostic durations, not RunPod runtime or cost forecasts"
+  ],
+  "native_smoke_scope": "Separate 2026-10-06 random-weight CPU smoke check; not a new run of the experiment.",
+  "native_smoke_sha256": "244767abde8d84d8a7f2f32cc2f8385227530e5b53014ff2a4c3a7a359156688",
+  "ruff": {
+    "format_files": 32,
+    "lint_passed": true
+  },
+  "scope": "Release verification on Apple Silicon macOS. Local code and source restoration only; no Linux/CUDA pilot, official checkpoint, MOSEv2 videos or tracking results.",
+  "tested_files_sha256": {
+    ".python-version": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398",
+    "artifacts/upstream.json": "c823f1248613366edb3f24e63de07a83ff3817a43072b894225060abc204efcb",
+    "environments/runpod/requirements.txt": "f456e19d85f76ba6987f4ecbb71acde64b4ec594c7535172f416b2d7e44f191c",
+    "notebooks/video_tracking_occlusion.ipynb": "f2f60fc79ffa93e0574a2a67906cd338b91ed5e5452f6c031bc3f16c6a1b8dbc",
+    "pytest.ini": "c809c969ec7e11b9ff37784e9c6fcc0b7c5148d168e18b05aed797e03fbd6ead",
+    "requirements.in": "0d0e080ea0950a14900261ff6b09dc8e23fecc78028e64929cd541e582ca35c5",
+    "requirements.txt": "8ef7e63220c27069b3ea7f5baf90156a4c566cc09b0663f14b855ce52cbb0511",
+    "ruff.toml": "49da92b8aab71841cb4b8503e4b70d0409afea94ac89ddcc5fa8e25560f08e75",
+    "scripts/fetch_upstream.py": "2a916e3fa9445748507d0b9158817665e08251c265fe853fbd3ae84b05cacc1e",
+    "scripts/setup_local.sh": "a2ce39ffeeac7d9fc69cb61a46a1af1389a6c807c293095cbfd41e6fc0f1dee9",
+    "scripts/setup_runpod.sh": "3c9ac5c2ffa03f99ca24e310b687667d107c4072fd56175b666d7f3087832ebe",
+    "src/__init__.py": "3cbea8feae3e5fc47e576905e2a9e82f42ede183e6fe789e8d1ab0a0c741c136",
+    "src/benchmark.py": "4b0b9cea86be996bb154ee6cd3241348d97827013e9e45265207a80b811d4eb8",
+    "src/checkpoints.py": "31749d049b0111bc47f6563ed1203d05d71fb18f850c2f160e69997a2f100e8e",
+    "src/config.py": "3ecec228803b233e24d4be9dcb9793e3a560af226d69ab00d408d604a8404f9a",
+    "src/data.py": "6499df5200e44a6ce18c6dcdab93f1723617e99cd72e7ac98677a8f568557ca9",
+    "src/demo.py": "d310b3bc2e2c1ca9ef8e4f27bd7ae04ae9432aa0f9576c194fbe9ab7a9a4a85d",
+    "src/environment.py": "a51375ba50428b114fad3ce256a9027c75f377c05a02fd93299e620dbfa987e8",
+    "src/evaluate.py": "40cf346bda1c765eda591442c0496855c59c5fefe3a8f1e3c656170bf5885f34",
+    "src/inference.py": "1f8c52ed76b99d9b1c0a5690dacbecd0746be3f75c1cfe6a9bfa52fe164a9d7a",
+    "src/io.py": "015d62c7019b05d28bb1a5ebab7a433d2e527d7b64f5b01ee231b0db54a42c3a",
+    "src/metrics.py": "6ab050da0e15ce84644349656b341c66b66cd74f8f83ca7c11ef1424b43f81b1",
+    "src/pilot.py": "ca65a4c8c861402cdb442791a178d1c0fb11321f1d1b2ebbc80b000eba516cba",
+    "src/reporting.py": "841e689e8327d874ec6fb009e828c63977ecfca02d7785163288daff3d1e4ac4",
+    "src/runs.py": "59019c696a5e54f6bcdf1dc925c0d1572608a5af40e10ecb165986e24a9ff1f2",
+    "src/sam2_adapter.py": "1aa4ce863c96d95a4877226b914218fb1365ae03205055e25082b6cd1f44649b",
+    "src/submissions.py": "6627607aba7071d73bd82d3ecc20a155e91104f4f549ce08b18fc0b2eeda6980",
+    "src/train.py": "307f0ac1e9f53428ffdc21c975f5ef710fa14cccfda0c4230aa4d57573f91641",
+    "src/video.py": "89b31e3de26ce5cf1a738fd6d21bd4e333109bb81e28a81cca5e32c47819290c",
+    "tests/test_adapter.py": "519201fbd2c0bdb07be1bb6dc0ec722158ea5382e7f448eb1424c6a4baca43be",
+    "tests/test_benchmark.py": "60ab7a9166a123537ea83126c52c5534a49bc1a35b136a4bfb43fd0d9f9d0a86",
+    "tests/test_data.py": "bfc63e813b5a131ca28adf45a6c40d2f3202072e1d0098ad4fc40bef98f71b52",
+    "tests/test_demo.py": "1afa7a8d2731674ca67304a6028b895c5df616d32eb429abb24a9cf02cbc27aa",
+    "tests/test_environment.py": "25452240c0869d35dc84d9f43e5c78b4381b6bef59501daf79af4ad21dce51db",
+    "tests/test_fetch_upstream.py": "c6075e200169e5c4c9016b460b9fda7de145dc7861a5fb6a93cf49b8f5684d0a",
+    "tests/test_inference.py": "e0c0e5ff50c10eb4337895965066bccca53b4b7c058e6acb9d79bbff81dfc470",
+    "tests/test_metrics.py": "76526ef706550ef480540264117be4a7e90ea564c5c832f40200887964c9a39c",
+    "tests/test_notebook.py": "1ec635b043085206b5b649785a883ba0634d6fc20dc0ab0f5d085bdd9c914688",
+    "tests/test_reporting.py": "a585ea220a0a10d7d483e1e99a7b1f4b8a2ad6973bb5451a7fdb5050560968c5",
+    "tests/test_runs.py": "e836bb0a7cc57b11a589f54a3b75f7f110564e18704e3833f9808247343d6b26",
+    "tests/test_submissions.py": "c270ce770221dd68643d365d912a32b53ecb54e4ff192d1ceefe8d9ca493b260",
+    "tests/test_training.py": "38b059f8a5b756b5dcfcfd60505ac1fb8c907f8083a16fc721d018a3336b11f9"
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q",
+    "failed": 0,
+    "passed": 102,
+    "seconds": 10.95
+  }
+}
